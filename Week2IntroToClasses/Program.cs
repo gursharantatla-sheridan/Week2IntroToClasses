@@ -15,8 +15,17 @@
             myAcc.Deposit(100);
             Console.WriteLine("\nBalance = " + myAcc.GetBalance().ToString("C"));
 
-            myAcc.Withdraw(300);
+            try
+            {
+                myAcc.Withdraw(3000);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
             Console.WriteLine("\nBalance = " + myAcc.GetBalance().ToString("C"));
+            
         }
     }
 }

@@ -23,8 +23,11 @@ namespace Week2IntroToClasses
             return _balance;
         }
 
-        public void SetBalance(double amount)
+        private void SetBalance(double amount)
         {
+            if (amount < 0)
+                throw new Exception("Amount cannot be less than zero");
+
             _balance = amount;
         }
 
@@ -36,6 +39,9 @@ namespace Week2IntroToClasses
 
         public void Withdraw(double amount)
         {
+            if (amount > _balance)
+                throw new Exception("Amount cannot be more than the balance");
+
             _balance -= amount;
         }
     }
