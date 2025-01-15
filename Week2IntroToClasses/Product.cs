@@ -13,6 +13,23 @@ namespace Week2IntroToClasses
         private string _name;
         private double _price;
 
+        //properties
+        private int _quantity;
+
+        //propfull
+        public int Quantity
+        {
+            get { return _quantity; }
+            set { _quantity = value; }
+        }
+
+        // prop
+        public int MyProperty { get; set; }
+
+        // propg
+        public int MyProperty1 { get; private set; }
+
+
         // constructors
         public Product()
         {

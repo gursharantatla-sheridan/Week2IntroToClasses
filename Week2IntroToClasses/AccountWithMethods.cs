@@ -25,9 +25,6 @@ namespace Week2IntroToClasses
 
         private void SetBalance(double amount)
         {
-            if (amount < 0)
-                throw new Exception("Amount cannot be less than zero");
-
             _balance = amount;
         }
 
